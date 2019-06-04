@@ -13,11 +13,11 @@
 		      height="280"
 		      :src="card.url"
 		    >
-			<h2 v-if="!hover" class="white--text borde-h2">{{card.titulo}}</h2>
+			<h2  class="white--text borde-h2">{{card.titulo}}</h2>
 		  		<v-scale-transition>
 		            <div
 		              v-if="hover"
-		              class="d-flex display-5 v-card--reveal  white--text"
+		              class="d-flex display-5 v-card--reveal opacity-1  white--text"
 		              style="height: 100%;">
 		              {{card.texto}}
 		            </div>
@@ -33,3 +33,11 @@
 		name:'card'
 	}
 </script>
+<style scoped>
+	.opacity-0{
+		opacity: 0 !important;
+	}	
+	.opacity-1{
+		opacity: 1 !important;
+	}
+</style>
